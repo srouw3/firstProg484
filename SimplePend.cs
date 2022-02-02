@@ -36,7 +36,6 @@ namespace Sim
             {
                 x[i] = x[i] + f[i] * dt;
             }
-            // Console.WriteLine($"{f[0].ToString()}   {f[1].ToString()}");
         }
 
         //--------------------------------------------------------------------
@@ -74,7 +73,7 @@ namespace Sim
             }
         }
 
-        public double thetaDot
+        public double theta
         {
             get {return x[0];}
 
@@ -83,9 +82,9 @@ namespace Sim
 
         public double thetaDot
         {
-            get {return x[0];}
+            get {return x[1];}
 
-            set {x[0] = value;}
+            set {x[1] = value;}
         }
     }
     
