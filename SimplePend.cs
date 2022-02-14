@@ -55,7 +55,7 @@ namespace Sim
             
             for(int i=0;i<n;++i)
             {
-                x[i] = x[i]+(1.0/6.0)*(k1[i]+2*k2[i]+2*k3[i]+k4[i])*dt;     // updated for the RK4 equation
+                x[i] = x[i]+(1.0/6.0)*(k1[i] + 2*k2[i] + 2*k3[i] + k4[i])*dt;     // updated for the RK4 equation
             }
         }
 
