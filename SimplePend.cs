@@ -44,12 +44,13 @@ namespace Sim
         //--------------------------------------------------------------------
         public void step(double dt)
         {
+            w[0] = x[0]*dt;
             rhsFunc(x,k1);      // evaluate at the first slope's step
-            w[0] = x[0]+0.5*dt*k1[1];
+            w[0] = (x[0]+0.5*k1[1])*dt;
             rhsFunc(w,k2);      // evaluate at the second slope's step
-            w[0] = x[0]+0.5*dt*k2[1];
+            w[0] = (x[0]+0.5*k2[1])*dt;
             rhsFunc(w,k3);      // evaluate at the third slope's step
-            w[0] = x[0]+dt*k3[1];
+            w[0] = (x[0]+dt*k3[1])*dt;
             rhsFunc(w,k4);      // evaluate at the fourth slope's step
 
             
